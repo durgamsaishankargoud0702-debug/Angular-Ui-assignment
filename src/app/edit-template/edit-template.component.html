@@ -1,0 +1,160 @@
+<div class="dashboard-container">
+    <!-- Top Header -->
+    <header class="top-header">
+        <div class="header-left">
+            <div class="brand-logo">LOGO</div>
+        </div>
+
+        <div class="header-center">
+            <div class="stepper-mockup">
+                <div class="step completed">
+                    <div class="step-circle">1</div>
+                    <div class="step-label">Product Info</div>
+                </div>
+                <div class="step-line"></div>
+                <div class="step active">
+                    <div class="step-circle">2</div>
+                    <div class="step-label">Manage Document</div>
+                </div>
+                <div class="step-line"></div>
+                <div class="step">
+                    <div class="step-circle">3</div>
+                    <div class="step-label">eCTD Submission</div>
+                </div>
+                <div class="step-line"></div>
+                <div class="step">
+                    <div class="step-circle">4</div>
+                    <div class="step-label">Validation</div>
+                </div>
+                <div class="step-line"></div>
+                <div class="step">
+                    <div class="step-circle">5</div>
+                    <div class="step-label">Dispatch</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-right">
+            <div class="user-profile">
+                <div class="user-details">
+                    <span class="user-name">Paul Rudd</span>
+                    <span class="user-role">Author</span>
+                    <span class="last-login">Last login : 23:05 UCT</span>
+                </div>
+                <div class="logout-icon">➜</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-body">
+        <!-- Left Sidebar -->
+        <aside class="left-sidebar">
+            <div class="nav-group">
+                <div class="nav-header">Configurations <span class="arrow">∨</span></div>
+            </div>
+            <div class="nav-group active-group">
+                <div class="nav-header">Templates</div>
+            </div>
+            <div class="nav-group">
+                <div class="nav-header">Document Prep <span class="arrow">∧</span></div>
+                <div class="nav-items">
+                    <div class="nav-item">Products</div>
+                    <div class="nav-item active">Applications</div>
+                    <div class="nav-item">Sequences</div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="content-wrapper">
+            <!-- Breadcrumb Bar -->
+            <div class="breadcrumb-bar">
+                <div class="breadcrumb-left">
+                    <span class="back-arrow">←</span>
+                    <span>USA - ESHI</span>
+                    <span class="separator">📂</span> Application ID <span class="separator">></span> 📂 0001 <span
+                        class="separator">></span> 📂 m1 <span class="separator">></span> 📂 us <span
+                        class="separator">></span> 📄 1-2-cover-letter.docx
+                </div>
+                <div class="breadcrumb-right">
+                    <span class="status-pill">Under Review</span>
+                </div>
+            </div>
+
+            <!-- Editor Split View -->
+            <div class="editor-container">
+                <!-- Left Panel: Variables -->
+                <div class="variables-panel">
+                    <div class="panel-header">
+                        <span class="toggle-icon">∨</span> General Info
+                    </div>
+
+                    <div class="panel-header">
+                        <span class="toggle-icon">∧</span> Variables <span class="add-btn">+</span>
+                    </div>
+
+                    <div class="variables-list">
+                        <div class="vars-table-header">
+                            <div class="col-name">Name</div>
+                            <div class="col-val">Default Value</div>
+                            <div class="col-req">Required</div>
+                        </div>
+
+                        <div class="var-row">
+                            <input class="var-input" value="var-1">
+                            <input class="var-input" value="default 1">
+                            <select class="var-select">
+                                <option>Yes</option>
+                            </select>
+                            <span class="delete-icon">🗑️</span>
+                        </div>
+
+                        <div class="var-row">
+                            <input class="var-input" value="var-2">
+                            <input class="var-input" value="default 2">
+                            <select class="var-select">
+                                <option>No</option>
+                            </select>
+                            <span class="delete-icon">🗑️</span>
+                        </div>
+                    </div>
+
+                    <div class="panel-header" style="margin-top: auto;">
+                        <span class="toggle-icon">∨</span> Comments
+                    </div>
+
+                    <div class="panel-footer-actions">
+                        <button mat-raised-button color="primary">Save</button>
+                        <button mat-button (click)="onCancel()">Cancel</button>
+                    </div>
+                </div>
+
+                <!-- Right Panel: Document Preview -->
+                <div class="preview-panel">
+                    <div class="document-page">
+                        <div class="doc-date">June 14, 2021</div>
+
+                        <h4 class="doc-title">Through Electronic Submissions Gateway (ESG)</h4>
+
+                        <p class="highlight-orange">{{'{'}}{{'{'}}var-1{{'}'}}{{'{'}}</p>
+
+                        <p>Center for Drug Evaluation and Research<br>
+                            Food and Drug Administration<br>
+                            Central Document Room, 5901B<br>
+                            Ammendale Road, Beltsville, <span
+                                class="highlight-orange">{{'{'}}{{'{'}}var-2{{'}'}}{{'{'}}</span></p>
+
+                        <p style="margin-top: 20px;"><strong>Re: Potassium Phosphates Injection, USP, phosphorus 3
+                                mmol/mL and potassium 4.4 mEq/m. (5 mL, 15 mL and 50 mL)</strong><br>
+                            <strong>Pre assigned ANDA # 216344; Sequence # 0001</strong><br>
+                            <span style="color: purple;">Request for Competitive Generic Therapy Designation</span>
+                        </p>
+
+                        <p>As per Section 506H(e)(2) of the FD&C Act, Amneal EU, Limited ("Amneal") hereby requests
+                            Competitive Generic Therapy (CGT) Designation for Pre-assigned ANDA # 216344...</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>

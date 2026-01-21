@@ -1,0 +1,186 @@
+/* Login Page Wrapper */
+.login-page-wrapper {
+  position: relative;
+  min-height: 100vh;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 1. Top Orange Bar */
+.top-orange-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  /* Thick top border */
+  background-color: #D35400;
+  /* Terracotta Orange */
+}
+
+/* 2. Logo */
+.logo-section {
+  margin-bottom: 40px;
+}
+
+.brand-logo-1090 {
+  font-family: 'Arial Narrow', sans-serif;
+  /* Condensed font */
+  font-size: 4rem;
+  font-weight: bold;
+  color: #A04000;
+  /* Darker/Brownish Orange for Logo */
+  letter-spacing: -2px;
+  display: inline-block;
+  line-height: 1;
+  margin: 0;
+}
+
+.dot {
+  color: #D35400;
+  /* Dot color match */
+}
+
+/* 3. Form Container */
+.login-content-center {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.login-form-container {
+  /* No card shadow/border in screenshot, just inputs */
+}
+
+/* 4. Input Fields */
+.custom-input-group {
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #F4F6F6;
+  /* Light Grey Background */
+  border: 1px solid #EAEDED;
+}
+
+.input-group-text {
+  background-color: transparent;
+  border: none;
+  color: #999;
+  padding-left: 15px;
+}
+
+.custom-input-field {
+  background-color: transparent;
+  border: none;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  padding: 15px 10px;
+  color: #555;
+  text-transform: uppercase;
+  /* Screenshot placeholders look UPPERCASE */
+}
+
+.custom-input-field:focus {
+  background-color: transparent;
+  /* Keep grey on focus */
+  box-shadow: none;
+  border-color: #D35400;
+}
+
+.custom-input-field::placeholder {
+  color: #aaa;
+  font-weight: 500;
+}
+
+/* 5. Error Banner */
+.error-banner {
+  background-color: #FADBD8;
+  /* Light Pink */
+  color: #C0392B;
+  /* Deep Red Text */
+  padding: 12px 15px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.error-icon {
+  background-color: #C0392B;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+/* 6. Sign In Button */
+.btn-signin {
+  width: 100%;
+  background-color: #D35400;
+  /* Terracotta */
+  color: white;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: background 0.3s;
+}
+
+.btn-signin:hover {
+  background-color: #BA4A00;
+}
+
+.btn-signin:disabled {
+  background-color: #E59866;
+  opacity: 0.8;
+}
+
+/* Forgot Password */
+.forgot-link {
+  color: #777;
+  font-size: 0.85rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* 7. Footer */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.social-circle {
+  width: 30px;
+  height: 30px;
+  background-color: #D5D8DC;
+  /* Light Grey Circle */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-family: serif;
+  /* For 'f', 'in', 't' look */
+}
+
+.copyright-text {
+  color: #555;
+  font-size: 0.75rem;
+  font-weight: 500;
+}

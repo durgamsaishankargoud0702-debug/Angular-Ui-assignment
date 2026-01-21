@@ -1,0 +1,364 @@
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* --- Top Header --- */
+.top-header {
+    height: 60px;
+    background-color: #D35400;
+    /* Main Orange */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: white;
+    flex-shrink: 0;
+}
+
+.brand-logo {
+    font-family: 'Impact', sans-serif;
+    /* Or similar condensed font */
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 2px solid white;
+    padding: 0 5px;
+    border-radius: 4px;
+}
+
+.header-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.stepper-mockup {
+    display: flex;
+    align-items: center;
+    font-size: 0.75rem;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.7;
+    position: relative;
+}
+
+.step.active,
+.step.completed {
+    opacity: 1;
+}
+
+.step-circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2px;
+    background-color: transparent;
+}
+
+.step.active .step-circle {
+    background-color: white;
+    color: #D35400;
+    font-weight: bold;
+}
+
+.step-line {
+    width: 40px;
+    height: 1px;
+    background-color: white;
+    margin: 0 10px;
+    opacity: 0.5;
+    margin-bottom: 15px;
+    /* Adjust alignment with circle */
+}
+
+/* User Profile */
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    text-align: right;
+    gap: 15px;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.user-name {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.user-role {
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+.last-login {
+    font-size: 0.7rem;
+    opacity: 0.7;
+}
+
+.logout-icon {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+
+/* --- Main Body --- */
+.main-body {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* Left Sidebar */
+.left-sidebar {
+    width: 220px;
+    background-color: #E67E22;
+    /* Slightly lighter orange */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    flex-shrink: 0;
+}
+
+.nav-group {
+    margin-bottom: 5px;
+}
+
+.nav-header {
+    padding: 12px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.nav-header:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-items {
+    background-color: #D35400;
+    /* Darker for nested items */
+}
+
+.nav-item {
+    padding: 10px 30px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.nav-item.active {
+    opacity: 1;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Content Area */
+.content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #F8F9FA;
+}
+
+/* Breadcrumb */
+.breadcrumb-bar {
+    height: 50px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.9rem;
+    color: #555;
+    flex-shrink: 0;
+}
+
+.separator {
+    margin: 0 8px;
+    color: #999;
+}
+
+.status-pill {
+    background-color: #F1C40F;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Editor Split View */
+.editor-container {
+    flex: 1;
+    display: flex;
+    padding: 15px;
+    gap: 15px;
+    overflow: hidden;
+}
+
+/* Variables Panel */
+.variables-panel {
+    width: 400px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.panel-header {
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+    font-weight: 600;
+    color: #444;
+    display: flex;
+    align-items: center;
+    background-color: #fafafa;
+}
+
+.toggle-icon {
+    margin-right: 10px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.add-btn {
+    margin-left: auto;
+    color: #D35400;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid #D35400;
+    padding: 0 6px;
+    border-radius: 3px;
+}
+
+.variables-list {
+    padding: 15px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.vars-table-header {
+    display: flex;
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.col-name {
+    width: 100px;
+}
+
+.col-val {
+    width: 120px;
+}
+
+.col-req {
+    width: 80px;
+}
+
+.var-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.var-input,
+.var-select {
+    padding: 6px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 0.9rem;
+}
+
+.var-input {
+    width: 100px;
+}
+
+.var-select {
+    width: 80px;
+}
+
+.delete-icon {
+    color: #d9534f;
+    cursor: pointer;
+}
+
+.panel-footer-actions {
+    padding: 10px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+
+/* Preview Panel */
+.preview-panel {
+    flex: 1;
+    background-color: #eee;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.document-page {
+    width: 100%;
+    max-width: 800px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-height: 1000px;
+    /* A4-ish height */
+    padding: 60px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.doc-date {
+    text-align: right;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.doc-title {
+    text-decoration: underline;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.highlight-orange {
+    color: #D35400;
+    font-style: italic;
+    font-weight: bold;
+}

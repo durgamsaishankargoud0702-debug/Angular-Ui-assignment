@@ -1,0 +1,25 @@
+<div class="list-container">
+    <div class="header">
+        <h1>My Templates</h1>
+        <button mat-raised-button color="primary" (click)="createNew()">+ Create New</button>
+    </div>
+
+    <div class="grid-container">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4" *ngFor="let tmpl of templates">
+                <mat-card class="template-card">
+                    <mat-card-header>
+                        <mat-card-title>{{ tmpl.name }}</mat-card-title>
+                        <mat-card-subtitle>Last edited: {{ tmpl.lastEdited | date }}</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>{{ tmpl.description }}</p>
+                    </mat-card-content>
+                    <mat-card-actions align="end">
+                        <button mat-button color="primary" (click)="editTemplate(tmpl.id)">Edit</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

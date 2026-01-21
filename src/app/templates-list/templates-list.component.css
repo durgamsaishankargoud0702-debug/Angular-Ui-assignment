@@ -1,0 +1,14 @@
+.list-container {
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.template-card {
+    height: 100%;
+}

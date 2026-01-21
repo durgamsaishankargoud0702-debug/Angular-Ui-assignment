@@ -1,0 +1,56 @@
+<div class="login-page-wrapper">
+  <!-- Top Orange Bar -->
+  <div class="top-orange-bar"></div>
+
+  <div class="login-content-center">
+    <!-- Logo -->
+    <div class="mb-5 text-center logo-section">
+      <h1 class="brand-logo-1090">1090<span class="dot">.</span></h1>
+    </div>
+
+    <!-- Login Form Container -->
+    <div class="login-form-container">
+      <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+
+        <!-- Username Field -->
+        <div class="input-group custom-input-group mb-3">
+          <span class="input-group-text custom-icon"><span class="icon-user">👤</span></span>
+          <input type="text" formControlName="email" class="form-control custom-input-field" placeholder="USERNAME">
+        </div>
+
+        <!-- Password Field -->
+        <div class="input-group custom-input-group mb-4">
+          <span class="input-group-text custom-icon"><span class="icon-lock">🔒</span></span>
+          <input type="password" formControlName="password" class="form-control custom-input-field"
+            placeholder="PASSWORD">
+        </div>
+
+        <!-- Error Banner -->
+        <div class="error-banner mb-4" *ngIf="showLoginError">
+          <span class="error-icon">❗</span> Invalid credentials. Please try again.
+        </div>
+
+        <!-- Sign In Button -->
+        <button type="submit" [disabled]="loginForm.invalid" class="btn-signin">
+          SIGN IN
+        </button>
+
+        <!-- Forgot Password -->
+        <div class="text-center mt-3">
+          <a href="#" class="forgot-link">Forgot Password?</a>
+        </div>
+
+      </form>
+    </div>
+
+    <!-- Social Footer -->
+    <div class="social-footer text-center mt-5">
+      <div class="social-icons">
+        <span class="social-circle">f</span>
+        <span class="social-circle">in</span>
+        <span class="social-circle">t</span>
+      </div>
+      <p class="copyright-text mt-3">© Copyright Dyaz Innovate 2023. All rights reserved.</p>
+    </div>
+  </div>
+</div>

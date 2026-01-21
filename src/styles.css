@@ -1,0 +1,40 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+:root {
+    --primary-color: #D35400;
+    /* Terracotta/Orange */
+    --background-color: #F2F3F2;
+    /* Light Grey */
+    --text-color: #333;
+}
+
+html,
+body {
+    height: 100%;
+    background-color: var(--background-color);
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    color: var(--text-color);
+}
+
+/* Material Override */
+.mat-mdc-raised-button.mat-primary {
+    --mdc-protected-button-container-color: var(--primary-color) !important;
+    --mdc-protected-button-label-text-color: white !important;
+}
+
+.mat-mdc-button.mat-primary {
+    --mdc-text-button-label-text-color: var(--primary-color) !important;
+}
+
+.mdc-text-field--focused .mdc-floating-label {
+    color: var(--primary-color) !important;
+}
+
+.mdc-text-field--focused .mdc-line-ripple {
+    border-bottom-color: var(--primary-color) !important;
+}
